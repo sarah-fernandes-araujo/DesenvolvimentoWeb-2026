@@ -1,0 +1,92 @@
+<!-- ========================= PÁGINA DA CATEGORIA ========================= -->
+
+<div class="categoria-pagina">
+
+    <!-- CABEÇALHO DA CATEGORIA -->
+
+    <div class="categoria-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>{{ nomeCategoria }}</h1>
+
+        <p>
+            Explore os instrumentos desta categoria.
+        </p>
+
+    </div>
+
+
+    <!-- PRODUTOS -->
+
+    <div class="produtos-grid">
+
+        <div
+            class="card produto-card"
+            *ngFor="let obj of lista"
+        >
+
+            <img
+                [src]="obj.codigo + '.png'"
+                class="card-img-top"
+                [alt]="obj.nome"
+            >
+
+
+            <div class="card-body">
+
+                <label class="card-title">
+                    {{ obj.nome }}
+                </label>
+
+
+                <!-- PREÇO ORIGINAL
+                     Só aparece se o produto estiver em promoção -->
+
+                <div
+                    class="preco-antigo"
+                    *ngIf="obj.valorPromo < obj.valor"
+                >
+
+                    {{ obj.valor | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+
+                </div>
+
+
+                <!-- PREÇO -->
+
+                <div class="preco">
+
+                    {{ obj.valorPromo | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="botoes-card">
+
+                    <a
+                        [routerLink]="['/detalhe', obj.codigo]"
+                        class="btn btn-info"
+                    >
+                        Detalhe
+                    </a>
+
+                    <button
+                        class="btn btn-success"
+                        *ngIf="obj.quantidade > 0"
+                        (click)="comprar(obj)"
+                   >
+                         Comprar
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

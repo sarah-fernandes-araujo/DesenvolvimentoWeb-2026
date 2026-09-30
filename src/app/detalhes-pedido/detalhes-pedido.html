@@ -1,0 +1,146 @@
+<!-- ========================= PÁGINA DE DETALHES DO PEDIDO ========================= -->
+
+<div class="detalhes-pedido-pagina">
+
+    <div class="detalhes-pedido-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>Detalhes do pedido</h1>
+
+        <p>
+            Confira os produtos e o status da sua compra.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         RESUMO DO PEDIDO
+         ===================================================== -->
+
+    <div class="detalhes-pedido-resumo">
+
+        <div>
+
+            <span>
+                Pedido
+            </span>
+
+            <strong>
+                #{{ numeroPedido }}
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Data
+            </span>
+
+            <strong>
+                {{ dataPedido }}
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Status
+            </span>
+
+            <strong class="status">
+                {{ statusPedido }}
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MENSAGEM DO PEDIDO
+         A cor muda conforme o status.
+         ===================================================== -->
+
+    <div
+        [class.mensagem-concluida]="statusPedido === 'Concluído'"
+        [class.mensagem-andamento]="statusPedido === 'Em andamento'"
+        [class.mensagem-cancelada]="statusPedido === 'Cancelado'"
+    >
+        {{ mensagemPedido }}
+    </div>
+
+
+    <!-- =====================================================
+         PRODUTOS DO PEDIDO
+         ===================================================== -->
+
+    <div class="detalhes-produtos">
+
+        <h2>
+            Produtos comprados
+        </h2>
+
+
+        <div
+            class="produto-item"
+            *ngFor="let produto of produtosPedido"
+        >
+
+            <div class="produto-imagem">
+
+                <img
+                    [src]="produto.codigo + '.png'"
+                    [alt]="produto.nome"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    {{ produto.nome }}
+                </h3>
+
+                <p>
+                    Quantidade: 1
+                </p>
+
+            </div>
+
+
+            <div class="produto-preco">
+
+                R$
+                {{ produto.valorPromo | number:'1.2-2' }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOTAL DO PEDIDO
+         ===================================================== -->
+
+    <div class="detalhes-pedido-total">
+
+        <span>
+            Total do pedido
+        </span>
+
+        <strong>
+            R$ {{ totalPedido | number:'1.2-2' }}
+        </strong>
+
+    </div>
+
+</div>

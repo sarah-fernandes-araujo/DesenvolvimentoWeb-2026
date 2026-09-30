@@ -1,0 +1,115 @@
+<!-- PÁGINA DE LOGIN -->
+<div class="login-pagina">
+
+    <!----------------------- CABEÇALHO ---------------------------->
+    <div class="login-cabecalho">
+        <span>SDG MUSIC</span>
+
+        <h1>Faça seu login</h1>
+
+        <p>
+            Acesse sua conta para continuar.
+        </p>
+
+    </div>
+
+
+    <!----------------------------- MENSAGEM DE ERRO ---------------------------------->
+    <!-- Mostra o aviso somente quando houver erro no login -->
+    <div
+        class="alert alert-danger login-alert"
+        *ngIf="mensagemErro"
+    >
+        <strong>Verifique!</strong>
+        Preencha o e-mail e a senha.
+    </div>
+
+
+    <!--------------------------------- ÁREA PRINCIPAL --------------------------------------->
+    <div class="login-conteudo">
+
+
+        <!--------------- FORMULÁRIO DE LOGIN ---------------------->
+        <div class="login-form">
+
+            <label
+                for="txtEmail"
+                class="form-label"
+            >
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="txtEmail"
+                class="form-control"
+                [(ngModel)]="email"
+            >
+
+
+            <label
+                for="txtSenha"
+                class="form-label"
+            >
+                Senha
+            </label>
+
+            <input
+                type="password"
+                id="txtSenha"
+                class="form-control"
+                [(ngModel)]="senha"
+            >
+
+
+            <!-- Chama a função entrar() para realizar o login -->
+            <button
+                type="button"
+                class="btn btn-login"
+                (click)="entrar()"
+            >
+                Entrar
+            </button>
+
+        </div>
+
+
+        <!-------------- OPÇÕES ---------------------->
+        <div class="login-opcoes">
+
+            <div class="opcao">
+
+                <p>
+                    Caso tenha esquecido sua senha
+                </p>
+
+                <a
+                    routerLink="/reenvio"
+                    class="btn btn-opcao"
+                >
+                    Reenviar senha
+                </a>
+
+            </div>
+
+
+            <div class="opcao">
+
+                <p>
+                    Ainda não tem cadastro?
+                </p>
+
+                <a
+                    routerLink="/cadastro"
+                    class="btn btn-opcao"
+                >
+                    Novo cadastro
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

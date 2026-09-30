@@ -1,0 +1,342 @@
+/* =========================================================
+   PÁGINA DE CADASTRO
+   Define o tamanho, espaçamento e posicionamento geral
+   da página.
+========================================================= */
+
+.cadastro-pagina {
+    /* Limita a largura máxima do conteúdo */
+    max-width: 900px;
+
+    /* Centraliza a página horizontalmente
+       e cria 60px de espaço acima e abaixo */
+    margin: 60px auto;
+
+    /* Espaçamento interno:
+       0 em cima/baixo e 30px nas laterais
+       + 60px de espaço inferior */
+    padding: 0 30px 60px;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CADASTRO
+========================================================= */
+
+.cadastro-cabecalho {
+    /* Centraliza todo o conteúdo do cabeçalho */
+    text-align: center;
+
+    /* Espaço abaixo do cabeçalho */
+    margin-bottom: 30px;
+}
+
+
+/* Texto "SDG MUSIC" acima do título */
+
+.cadastro-cabecalho span {
+    /* Fonte clássica */
+    font-family: Georgia, serif;
+
+    /* Tamanho da fonte */
+    font-size: 14px;
+
+    /* Aumenta o espaço entre as letras */
+    letter-spacing: 4px;
+
+    /* Dourado */
+    color: #B89B5E;
+}
+
+
+/* Título "Crie sua conta" */
+
+.cadastro-cabecalho h1 {
+    /* Fonte clássica */
+    font-family: Georgia, serif;
+
+    /* Tamanho do título */
+    font-size: 42px;
+
+    /* Dourado mais claro */
+    color: #D4B96A;
+
+    /* Espaçamento:
+       8px em cima,
+       0 nas laterais,
+       10px embaixo */
+    margin: 8px 0 10px;
+}
+
+
+/* Texto abaixo do título */
+
+.cadastro-cabecalho p {
+    /* Cor creme */
+    color: #F2E6C9;
+
+    /* Tamanho do texto */
+    font-size: 16px;
+
+    /* Remove margem padrão do parágrafo */
+    margin: 0;
+}
+
+
+/* =========================================================
+   MENSAGEM DE SUCESSO
+   É a caixa "Cadastro concluído com sucesso!"
+========================================================= */
+
+.cadastro-pagina .alert {
+    /* Limita a largura da mensagem */
+    max-width: 700px;
+
+    /* Centraliza a mensagem
+       e deixa 25px abaixo dela */
+    margin: 0 auto 25px;
+
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.cadastro-form {
+    /* Transforma o formulário em um Grid */
+    display: grid;
+
+    /* Cria duas colunas de mesmo tamanho */
+    grid-template-columns: 1fr 1fr;
+
+    /* Espaçamento entre as linhas e colunas:
+       22px entre linhas
+       25px entre colunas */
+    gap: 22px 25px;
+
+    /* Espaço interno do formulário */
+    padding: 40px;
+
+    /* Fundo creme */
+    background-color: #F2E6C9;
+
+    /* Borda dourada */
+    border: 1px solid #B89B5E;
+
+    /* Arredonda os cantos */
+    border-radius: 12px;
+
+    /* Cria uma sombra ao redor do formulário */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   CAMPOS DO FORMULÁRIO
+   Cada grupo label + input.
+========================================================= */
+
+.campo {
+    /* Organiza os elementos verticalmente */
+    display: flex;
+
+    /* Coloca label em cima e input embaixo */
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   ENDEREÇO E BOTÃO
+========================================================= */
+
+.campo-endereco,
+.cadastro-acoes {
+    /* Faz esses elementos ocuparem
+       as duas colunas do formulário */
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABELS
+   Exemplo: Nome completo, Documento, E-mail...
+========================================================= */
+
+.campo .form-label {
+    /* Espaço entre o label e o campo */
+    margin-bottom: 7px;
+
+    /* Fonte clássica */
+    font-family: Georgia, serif;
+
+    /* Tamanho do texto */
+    font-size: 15px;
+
+    /* Deixa o texto um pouco mais forte */
+    font-weight: 600;
+
+    /* Verde escuro */
+    color: #16443D;
+}
+
+
+/* =========================================================
+   CAMPOS DE TEXTO
+   Input e textarea.
+========================================================= */
+
+.campo .form-control {
+    /* Espaçamento interno:
+       11px em cima/baixo
+       12px nas laterais */
+    padding: 11px 12px;
+
+    /* Borda dourada */
+    border: 1px solid #B89B5E;
+
+    /* Cantos levemente arredondados */
+    border-radius: 5px;
+
+    /* Fundo quase branco */
+    background-color: #fffdf7;
+
+    /* Cor do texto digitado */
+    color: #222;
+
+    /* Tamanho do texto */
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   EFEITO AO CLICAR NO CAMPO
+========================================================= */
+
+.campo .form-control:focus {
+    /* Quando o usuário clica no campo,
+       a borda fica verde */
+    border-color: #16443D;
+
+    /* Cria um brilho/sombra suave ao redor */
+    box-shadow:
+        0 0 0 3px rgba(22, 68, 61, 0.15);
+}
+
+
+/* =========================================================
+   BOTÃO "GRAVAR CADASTRO"
+========================================================= */
+
+.cadastro-acoes .btn {
+    /* Faz o botão ocupar toda a largura */
+    width: 100%;
+
+    /* Espaçamento interno do botão */
+    padding: 13px;
+
+    /* Fundo dourado */
+    background-color: #B89B5E;
+
+    /* Borda dourada */
+    border: 1px solid #B89B5E;
+
+    /* Cor escura do texto */
+    color: #101513;
+
+    /* Tamanho do texto */
+    font-size: 16px;
+
+    /* Deixa o texto mais forte */
+    font-weight: 600;
+
+    /* Arredonda os cantos */
+    border-radius: 5px;
+
+    /* Faz as mudanças do hover acontecerem suavemente */
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   EFEITO DO BOTÃO AO PASSAR O MOUSE
+========================================================= */
+
+.cadastro-acoes .btn:hover {
+    /* Dourado mais claro */
+    background-color: #D4B96A;
+
+    /* Borda também fica mais clara */
+    border-color: #D4B96A;
+
+    /* Faz o botão subir 2px */
+    transform: translateY(-2px);
+
+    /* Adiciona uma sombra dourada */
+    box-shadow:
+        0 5px 15px rgba(184, 155, 94, 0.35);
+}
+
+
+/* =========================================================
+   MENSAGENS DE VALIDAÇÃO
+   Exemplo: "Nome é obrigatório!"
+========================================================= */
+
+.invalid-feedback {
+    /* Diminui um pouco o tamanho da mensagem */
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Essas regras entram quando a tela tiver
+   no máximo 700px de largura.
+   Exemplo: celular ou janela pequena.
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Ajusta o tamanho e espaçamento da página */
+    .cadastro-pagina {
+        /* Menos espaço no topo */
+        margin: 40px auto;
+
+        /* Menos espaço nas laterais */
+        padding: 0 20px 50px;
+    }
+
+
+    /* Diminui o título em telas menores */
+
+    .cadastro-cabecalho h1 {
+        font-size: 34px;
+    }
+
+
+    /* =====================================================
+       FORMULÁRIO NO CELULAR
+    ===================================================== */
+
+    .cadastro-form {
+        /* Em vez de duas colunas,
+           passa a ter apenas uma */
+        grid-template-columns: 1fr;
+
+        /* Diminui o espaço interno */
+        padding: 25px 20px;
+    }
+
+
+    /* No celular, endereço e botão
+       deixam de precisar ocupar duas colunas */
+
+    .campo-endereco,
+    .cadastro-acoes {
+        grid-column: auto;
+    }
+
+}

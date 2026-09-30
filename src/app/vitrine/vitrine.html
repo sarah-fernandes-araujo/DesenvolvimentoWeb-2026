@@ -1,0 +1,206 @@
+<!------------ HERO DA HOME ------------>
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <h1>SDG Music</h1>
+
+        <h2>A arte de fazer música!</h2>
+
+        <p>
+            Instrumentos para músicos que valorizam a beleza e a tradição.
+        </p>
+
+        <button
+            type="button"
+            class="btn btn-warning"
+            (click)="irParaInstrumentos()"
+        >
+            Promoções
+        </button>
+
+    </div>
+
+</section>
+
+
+<!----------- CATEGORIAS ------------->
+
+<section class="categorias">
+
+    <h2>Categorias</h2>
+
+    <div class="categorias-grid">
+
+
+        <!-- CORDAS -->
+
+        <div
+            class="categoria"
+            (click)="abrirCategoria('cordas')"
+        >
+
+            <h3>Cordas</h3>
+
+            <p>
+                Violinos, violas, violoncelos e instrumentos de cordas.
+            </p>
+
+        </div>
+
+
+        <!-- TECLAS -->
+
+        <div
+            class="categoria"
+            (click)="abrirCategoria('teclas')"
+        >
+
+            <h3>Teclas</h3>
+
+            <p>
+                Pianos, órgãos e instrumentos de teclado.
+            </p>
+
+        </div>
+
+
+        <!-- SOPROS -->
+
+        <div
+            class="categoria"
+            (click)="abrirCategoria('sopros')"
+        >
+
+            <h3>Sopros</h3>
+
+            <p>
+                Instrumentos de metais e madeiras.
+            </p>
+
+        </div>
+
+
+        <!-- PERCUSSÃO -->
+
+        <div
+            class="categoria"
+            (click)="abrirCategoria('percussao')"
+        >
+
+            <h3>Percussão</h3>
+
+            <p>
+                Instrumentos de percussão para diferentes formações.
+            </p>
+
+        </div>
+
+
+        <!-- HISTÓRICOS -->
+
+        <div
+            class="categoria"
+            (click)="abrirCategoria('historicos')"
+        >
+
+            <h3>Históricos</h3>
+
+            <p>
+                Instrumentos inspirados na tradição musical europeia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<br>
+
+
+<!------------- PROMOÇÕES ------------------>
+
+<section
+    class="promocoes"
+    id="promocoes"
+>
+
+    <h2>Promoções</h2>
+
+</section>
+
+
+<!------------- CARDS DOS PRODUTOS ------------------>
+
+<div
+    class="produtos-grid"
+    id="instrumentos"
+>
+
+    <div
+        class="card produto-card"
+        *ngFor="let obj of lista"
+    >
+
+        <img
+            [src]="obj.codigo + '.png'"
+            class="card-img-top"
+            [alt]="obj.nome"
+        >
+
+
+        <div class="card-body">
+
+            <label class="card-title">
+                {{ obj.nome }}
+            </label>
+
+
+            <!-- PREÇO ORIGINAL -->
+
+            <div class="preco-antigo">
+
+                {{ formatarPreco(obj.valor) }}
+
+            </div>
+
+
+            <!-- PREÇO PROMOCIONAL -->
+
+            <div class="preco">
+
+                {{ formatarPreco(obj.valorPromo) }}
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="botoes-card">
+
+                <a
+                    [routerLink]="['/detalhe', obj.codigo]"
+                    class="btn btn-info"
+                >
+                    Detalhe
+                </a>
+
+
+                <button
+                    class="btn btn-success"
+                    *ngIf="obj.quantidade > 0"
+                    (click)="comprar(obj)"
+                >
+                    Comprar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

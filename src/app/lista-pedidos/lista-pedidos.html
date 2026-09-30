@@ -1,0 +1,261 @@
+<!-- ========================= PÁGINA DE LISTA DE PEDIDOS ========================= -->
+
+<div class="pedidos-pagina">
+
+
+    <!-- CABEÇALHO -->
+
+    <div class="pedidos-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>Meus pedidos</h1>
+
+        <p>
+            Consulte seus pedidos realizados.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         PRIMEIRO PEDIDO
+         Pedido simulado para representar um pedido concluído
+         ===================================================== -->
+
+    <div class="pedido-card">
+
+        <div class="pedido-topo">
+
+            <div>
+
+                <span class="pedido-label">
+                    Pedido
+                </span>
+
+                <strong>
+                    #{{ pedido1.numero }}
+                </strong>
+
+            </div>
+
+
+            <span class="pedido-status">
+
+                {{ pedido1.status }}
+
+            </span>
+
+        </div>
+
+
+        <div class="pedido-info">
+
+            <div>
+
+                <span>
+                    Data
+                </span>
+
+                <strong>
+                    {{ pedido1.data }}
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    R$ {{ pedido1.total | number:'1.2-2' }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="pedido-acoes">
+
+            <!--
+                Abre os detalhes do pedido 0001.
+            -->
+
+            <button
+                type="button"
+                class="btn btn-detalhes"
+                [routerLink]="['/detalhes-pedido', pedido1.numero]"
+            >
+                Ver detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SEGUNDO PEDIDO
+         Pedido que corresponde à compra atual da aplicação
+         ===================================================== -->
+
+    <div class="pedido-card">
+
+        <div class="pedido-topo">
+
+            <div>
+
+                <span class="pedido-label">
+                    Pedido
+                </span>
+
+                <strong>
+                    #{{ pedido2.numero }}
+                </strong>
+
+            </div>
+
+
+            <span class="pedido-status">
+
+                {{ pedido2.status }}
+
+            </span>
+
+        </div>
+
+
+        <div class="pedido-info">
+
+            <div>
+
+                <span>
+                    Data
+                </span>
+
+                <strong>
+                    {{ pedido2.data }}
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    R$ {{ pedido2.total | number:'1.2-2' }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="pedido-acoes">
+
+            <!--
+                Abre os detalhes do pedido 0002.
+            -->
+
+            <button
+                type="button"
+                class="btn btn-detalhes"
+                [routerLink]="['/detalhes-pedido', pedido2.numero]"
+            >
+                Ver detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TERCEIRO PEDIDO
+         Pedido simulado para representar um pedido cancelado
+         ===================================================== -->
+
+    <div class="pedido-card">
+
+        <div class="pedido-topo">
+
+            <div>
+
+                <span class="pedido-label">
+                    Pedido
+                </span>
+
+                <strong>
+                    #{{ pedido3.numero }}
+                </strong>
+
+            </div>
+
+
+            <span class="pedido-status">
+
+                {{ pedido3.status }}
+
+            </span>
+
+        </div>
+
+
+        <div class="pedido-info">
+
+            <div>
+
+                <span>
+                    Data
+                </span>
+
+                <strong>
+                    {{ pedido3.data }}
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    R$ {{ pedido3.total | number:'1.2-2' }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="pedido-acoes">
+
+            <!--
+                Abre os detalhes do pedido 0003.
+            -->
+
+            <button
+                type="button"
+                class="btn btn-detalhes"
+                [routerLink]="['/detalhes-pedido', pedido3.numero]"
+            >
+                Ver detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+
+</div>

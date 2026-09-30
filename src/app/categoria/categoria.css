@@ -1,0 +1,246 @@
+/* =========================
+   PÁGINA DA CATEGORIA
+========================= */
+
+.categoria-pagina {
+    padding: 50px 40px 70px;
+}
+
+
+/* =========================
+   CABEÇALHO DA CATEGORIA
+========================= */
+
+.categoria-cabecalho {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.categoria-cabecalho span {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #D4B96A;
+}
+
+.categoria-cabecalho h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #D4B96A;
+    margin: 10px 0;
+}
+
+.categoria-cabecalho p {
+    color: #d6c9a8;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* =========================
+   GRID DOS PRODUTOS
+========================= */
+
+.produtos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 28px;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CARD DO PRODUTO
+========================= */
+
+.produto-card {
+    background-color: #f5f0e6;
+
+    border: none;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.produto-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(212, 185, 106, 0.25);
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.produto-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: contain;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   CONTEÚDO DO CARD
+========================= */
+
+.produto-card .card-body {
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.card-title {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #183a35;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PREÇOS
+========================= */
+
+.preco-antigo {
+    font-size: 15px;
+
+    color: #777;
+
+    text-decoration: line-through;
+
+    margin-bottom: 3px;
+}
+
+
+.preco {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #8F7438;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes-card {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.botoes-card .btn {
+    min-width: 90px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .categoria-pagina {
+        padding: 40px 20px 60px;
+    }
+
+    .categoria-cabecalho h1 {
+        font-size: 34px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   BOTÕES DOS PRODUTOS
+========================= */
+
+.botoes-card {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoes-card .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+
+/* =========================
+   BOTÃO DETALHE
+========================= */
+
+.botoes-card .btn-info {
+    background-color: #16443D;
+    border: 1px solid #16443D;
+    color: #F2E6C9;
+}
+
+.botoes-card .btn-info:hover {
+    background-color: #1E574F;
+    border-color: #B89B5E;
+    color: #F2E6C9;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   BOTÃO COMPRAR
+========================= */
+
+.botoes-card .btn-success {
+    background-color: #B89B5E;
+    border: 1px solid #B89B5E;
+    color: #101513;
+}
+
+.botoes-card .btn-success:hover {
+    background-color: #D4B96A;
+    border-color: #D4B96A;
+    color: #101513;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 155, 94, 0.3);
+}

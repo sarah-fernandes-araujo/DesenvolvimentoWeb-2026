@@ -1,0 +1,300 @@
+/* =========================================================
+   PÁGINA DE LOGIN
+========================================================= */
+
+.login-pagina {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 30px 60px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.login-cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Texto "SDG MUSIC" */
+
+.login-cabecalho span {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #B89B5E;
+}
+
+
+/* Título */
+
+.login-cabecalho h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #D4B96A;
+    margin: 8px 0 10px;
+}
+
+
+/* Texto abaixo do título */
+
+.login-cabecalho p {
+    color: #F2E6C9;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   MENSAGEM DE ERRO
+========================================================= */
+
+.login-alert {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
+
+.login-conteudo {
+    display: grid;
+
+    /* Duas colunas:
+       uma para login
+       outra para as opções */
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO DE LOGIN
+========================================================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+
+    background-color: #F2E6C9;
+
+    border: 1px solid #B89B5E;
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.login-form .form-label {
+    margin-bottom: 7px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #16443D;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.login-form .form-control {
+    padding: 11px 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #B89B5E;
+    border-radius: 5px;
+
+    background-color: #fffdf7;
+    color: #222;
+
+    font-size: 15px;
+}
+
+
+/* Efeito ao clicar no campo */
+
+.login-form .form-control:focus {
+    border-color: #16443D;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 68, 61, 0.15);
+}
+
+
+/* =========================================================
+   BOTÃO ENTRAR
+========================================================= */
+
+.btn-login {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    background-color: #B89B5E;
+    border: 1px solid #B89B5E;
+
+    color: #101513;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 5px;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Hover do botão */
+
+.btn-login:hover {
+    background-color: #D4B96A;
+    border-color: #D4B96A;
+
+    color: #101513;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(184, 155, 94, 0.35);
+}
+
+
+/* =========================================================
+   OPÇÕES DO LADO DIREITO
+========================================================= */
+
+.login-opcoes {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    padding: 40px;
+
+    background-color: #102522;
+
+    border: 1px solid #B89B5E;
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Cada opção */
+
+.opcao {
+    text-align: center;
+}
+
+
+/* Texto das opções */
+
+.opcao p {
+    color: #F2E6C9;
+
+    font-size: 15px;
+
+    margin: 0 0 12px;
+}
+
+
+/* =========================================================
+   BOTÕES DAS OPÇÕES
+========================================================= */
+
+.btn-opcao {
+    display: block;
+
+    width: 100%;
+
+    padding: 11px;
+
+    box-sizing: border-box;
+
+    background-color: transparent;
+
+    border: 1px solid #B89B5E;
+
+    color: #D4B96A;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Hover dos botões */
+
+.btn-opcao:hover {
+    background-color: #B89B5E;
+
+    border-color: #B89B5E;
+
+    color: #101513;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(184, 155, 94, 0.25);
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .login-pagina {
+        margin: 40px auto;
+        padding: 0 20px 50px;
+    }
+
+
+    .login-cabecalho h1 {
+        font-size: 34px;
+    }
+
+
+    /* No celular, as duas colunas
+       viram uma só */
+
+    .login-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+
+    .login-form,
+    .login-opcoes {
+        padding: 25px 20px;
+    }
+
+}

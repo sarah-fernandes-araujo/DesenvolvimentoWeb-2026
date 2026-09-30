@@ -1,0 +1,335 @@
+/* ====================================== HERO ==================================================== */
+/* O centro do Hero fica mais iluminado em verde, e as bordas vão ficando mais escuras: */
+.hero {
+    background: radial-gradient(
+        circle at center,
+        #16443D 0%,
+        #081C1A 55%,
+        #030908 100%
+    );
+
+    color: #F2E6C9;
+    padding: 90px 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    border-bottom: 1px solid #b89b5e;
+}/* até aqui...*/
+
+.hero-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*Título1*/
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    margin-bottom: 12px;
+    color: #D4B96A;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    letter-spacing: 2px;
+}
+
+/*Título2*/
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #F2E6C9;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #E6DFCE;
+}
+
+/*botão*/
+.hero .btn {
+    background-color: #B89B5E;
+    border: 1px solid #B89B5E;
+    color: #101513;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #D6B96A;
+    border-color: #D6B96A;
+    color: #101513;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 155, 94, 0.35);
+}
+
+/* =========================================== CATEGORIAS ============================================== */
+
+.categorias {
+    padding: 25px 40px 35px;
+    text-align: center;
+}
+
+.categorias h2 {
+    font-family: Georgia, serif;
+    color: #F2E6C9;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fundo dos 5 cards: cordas, teclas, sopros, percussão e Históricos */
+.categoria {
+
+    background-color: #102522;
+    padding: 25px 15px;
+    border-radius: 8px;
+    border: 1px solid #b89b5e;
+    border-top: 3px solid #E0C15A;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+/* Fazer o card "acender" */
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(224, 193, 90, 0.35);
+}
+
+/* Títulos dos 5 cards: cordas, teclas, sopros, percussão e Históricos */
+.categoria h3 {
+
+    font-family: Georgia, serif;
+    color: #E0C15A;
+    font-size: 20px;
+    margin-bottom: 12px;
+
+}
+
+/* Texto nos 5 cards: cordas, teclas, sopros, percussão e Históricos */
+.categoria p {
+
+    color: #F2E6C9;
+    font-size: 14px;
+    margin: 0;
+
+}
+
+/* =========================================== PRODUTOS ========================================== */
+
+
+
+/* ---GRID DOS PRODUTOS --- */
+
+.produtos-grid {
+    display: grid;
+
+    /* Duas colunas */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Espaço entre os cards */
+    gap: 60px;
+
+    /* Deixa a área dos produtos um pouco mais larga */
+    max-width: 1000px;
+
+    /* Centraliza a área */
+    margin: 0 auto;
+
+    /* Espaçamento interno */
+    padding: 35px 30px 60px;
+
+    /* Faz o padding entrar no tamanho total */
+    box-sizing: border-box;
+}
+
+/* Fundo dos cards dos produtos */
+.produto-card {
+    background-color: #F2E6C9;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    text-align: center;
+}
+
+/* Fazer acender */
+.produto-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(224, 193, 90, 0.35);
+}
+
+/* Fotos nos cards  */
+.produto-card img {
+    width: auto;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.produto-card .card-title {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #16443D;
+    letter-spacing: 0.3px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Preço */
+.preco {
+    font-size: 21px;
+    font-weight: 700;
+    color: #8F7438;
+    margin: 10px 0 18px;
+    letter-spacing: 0.3px;
+}
+
+/* Preço antigo da promoção */
+
+.preco-antigo {
+    font-size: 15px;
+    color: #777;
+    text-decoration: line-through;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+/* ========================= BOTÕES DOS PRODUTOS ========================= */
+
+.botoes-card {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoes-card .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Botão Detalhe */
+.botoes-card .btn-info {
+    background-color: #16443D;
+    border: 1px solid #16443D;
+    color: #F2E6C9;
+}
+
+.botoes-card .btn-info:hover {
+    background-color: #1E574F;
+    border-color: #B89B5E;
+    color: #F2E6C9;
+    transform: translateY(-2px);
+}
+
+/* Botão Comprar */
+.botoes-card .btn-success {
+    background-color: #B89B5E;
+    border: 1px solid #B89B5E;
+    color: #101513;
+}
+
+.botoes-card .btn-success:hover {
+    background-color: #D4B96A;
+    border-color: #D4B96A;
+    color: #101513;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 155, 94, 0.3);
+}
+
+/* Título da seção de promoções */
+
+.promocoes {
+    text-align: center;
+    margin: 45px 0 25px;
+}
+
+.promocoes h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #D4B96A;
+    margin: 0;
+}
+
+/* Categorias */
+.categoria {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* ========================= RESPONSIVIDADE ========================= */
+/*Os cards ficam maiores e mais fáceis de visualizar. Só entra quando a tela fica menor.*/
+@media (max-width: 900px) {
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+}
+
+/*computador, tablet e celular sem alterar o visual*/
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .categorias {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}

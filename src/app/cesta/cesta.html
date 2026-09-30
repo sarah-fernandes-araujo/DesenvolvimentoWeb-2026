@@ -1,0 +1,155 @@
+<!-- ========================= PÁGINA DA CESTA ========================= -->
+
+<div class="cesta-pagina">
+
+    <div class="cesta-cabecalho">
+        <span>SDG MUSIC</span>
+
+        <h1>Sua cesta de compras</h1>
+
+        <p>
+            Confira os instrumentos selecionados antes de finalizar seu pedido.
+        </p>
+    </div>
+
+
+    <div class="cesta-conteudo">
+
+        <div class="cesta-tabela">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Instrumento</th>
+                        <th>Quantidade</th>
+                        <th>Valor unitário</th>
+                        <th>Subtotal</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                    <tr
+                        *ngFor="let item of cestaService.cesta.itens"
+                    >
+
+                        <td class="produto-nome">
+                            {{ item.produto.nome }}
+                        </td>
+
+
+                        <!-- QUANTIDADE -->
+
+                        <td class="produto-quantidade">
+
+                            <button
+                                type="button"
+                                class="btn-quantidade"
+                                (click)="cestaService.diminuirQuantidade(item.produto.codigo)"
+                            >
+                                −
+                            </button>
+
+                            <span class="quantidade-numero">
+                                {{ item.quantidade }}
+                            </span>
+
+                            <button
+                                type="button"
+                                class="btn-quantidade"
+                                (click)="cestaService.adicionarProduto(item.produto)"
+                            >
+                                +
+                            </button>
+
+                        </td>
+
+
+                        <!-- VALOR UNITÁRIO -->
+
+                        <td>
+                            R$ {{ item.produto.valor | number:'1.2-2' }}
+                        </td>
+
+
+                        <!-- SUBTOTAL -->
+
+                        <td class="produto-subtotal">
+                            R$ {{ item.valorItem | number:'1.2-2' }}
+                        </td>
+
+
+                        <!-- REMOVER PRODUTO -->
+
+                        <td>
+
+                            <button
+                                type="button"
+                                class="btn-remover"
+                                (click)="cestaService.removerProduto(item.produto.codigo)"
+                            >
+                                Remover
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- RESUMO DA CESTA -->
+
+        <div class="cesta-resumo">
+
+            <div class="resumo-texto">
+
+                <span>Total da cesta</span>
+
+                <strong>
+                    R$ {{ cestaService.cesta.valorTotal | number:'1.2-2' }}
+                </strong>
+
+            </div>
+
+
+            <!-- BOTÕES DA CESTA -->
+
+            <div class="botoes-cesta">
+
+                <!-- CONTINUAR COMPRANDO -->
+
+                <button
+                    type="button"
+                    class="btn-continuar"
+                    (click)="continuarComprando()"
+                >
+                    Continuar comprando
+                </button>
+
+
+                <!-- FINALIZAR PEDIDO -->
+
+                <button
+                    type="button"
+                    class="btn-finalizar"
+                    routerLink="/pedido"
+                >
+                    Finalizar pedido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

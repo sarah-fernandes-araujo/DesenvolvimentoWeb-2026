@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================================================
+   ESTILOS GLOBAIS
+========================================================= */
+
+
+/* Permite que os links com #id façam uma rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+
+    background: radial-gradient(
+        circle,
+        #002220 0%,
+        #000c0b 100%
+    );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    background-color: black;
+    margin-bottom: 10px;
+    color: white;
+    padding: 5px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background-color: gray;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+
+/* =========================================================
+   LOGOTIPO
+========================================================= */
+
+.logotipo {
+    width: 200px;
+}
+
+/* =========================================================
+   EFEITO GLOBAL DE CLIQUE
+   O botão afunda levemente quando é pressionado.
+========================================================= */
+
+button:active,
+.btn:active,
+a.btn:active {
+    transform: translateY(2px) scale(0.97) !important;
+}

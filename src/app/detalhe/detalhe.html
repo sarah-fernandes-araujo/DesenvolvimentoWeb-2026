@@ -1,0 +1,57 @@
+<div class="detalhe-container" *ngIf="produto">
+
+    <div class="detalhe-imagem">
+
+        <img
+            [src]="produto.codigo + '.png'"
+            [alt]="produto.nome"
+        >
+
+    </div>
+
+
+    <div class="detalhe-info">
+
+        <h1>
+            {{ produto.nome }}
+        </h1>
+
+        <p class="descricao">
+            {{ produto.descritivo }}
+        </p>
+
+
+        <div class="precos">
+
+            <div
+                class="preco-antigo"
+                *ngIf="produto.valorPromo < produto.valor"
+            >
+                {{ produto.valor | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+            </div>
+
+            <div class="preco">
+                {{ produto.valorPromo | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+            </div>
+
+        </div>
+
+
+        <p class="quantidade">
+            Disponíveis: {{ produto.quantidade }}
+        </p>
+
+
+        <button
+            type="button"
+            class="btn btn-success"
+            *ngIf="produto.quantidade > 0"
+            (click)="comprar()"
+        >
+            Comprar
+        </button>
+
+    </div>
+
+</div>
+

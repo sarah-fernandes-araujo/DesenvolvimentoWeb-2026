@@ -1,0 +1,471 @@
+/* =========================================================
+   PÁGINA DA CESTA
+========================================================= */
+
+.cesta-pagina {
+    min-height: 600px;
+    padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cesta-cabecalho {
+    background: radial-gradient(
+        circle at center,
+        #16443D 0%,
+        #081C1A 55%,
+        #030908 100%
+    );
+
+    color: #F2E6C9;
+
+    text-align: center;
+
+    padding: 55px 30px 45px;
+
+    border-bottom: 1px solid #B89B5E;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.cesta-cabecalho span {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #D4B96A;
+
+    margin-bottom: 10px;
+}
+
+
+.cesta-cabecalho h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    margin: 0 0 12px;
+
+    color: #D4B96A;
+
+    letter-spacing: 1px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+.cesta-cabecalho p {
+    margin: 0;
+
+    color: #E6DFCE;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.cesta-conteudo {
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    padding: 0 30px;
+}
+
+
+/* =========================================================
+   TABELA
+========================================================= */
+
+.cesta-tabela {
+    background-color: #F2E6C9;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+
+    border: 1px solid #B89B5E;
+}
+
+
+.cesta-tabela table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+/* Cabeçalho da tabela */
+
+.cesta-tabela thead {
+    background-color: #16443D;
+
+    color: #F2E6C9;
+}
+
+
+.cesta-tabela th {
+    padding: 17px 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* Linhas */
+
+.cesta-tabela td {
+    padding: 18px 20px;
+
+    color: #303B37;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid rgba(184, 155, 94, 0.35);
+}
+
+
+.cesta-tabela tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.cesta-tabela tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+
+.cesta-tabela tbody tr:hover {
+    background-color: #EAE0C8;
+}
+
+
+/* Nome do instrumento */
+
+.produto-nome {
+    font-family: Georgia, serif;
+
+    font-size: 17px !important;
+
+    font-weight: 600;
+
+    color: #16443D !important;
+}
+
+
+/* Quantidade */
+
+.produto-quantidade {
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* Subtotal */
+
+.produto-subtotal {
+    font-weight: 700;
+
+    color: #8F7438 !important;
+}
+
+
+/* Centraliza a coluna de quantidade */
+
+.cesta-tabela th:nth-child(2),
+.cesta-tabela td:nth-child(2) {
+    text-align: center;
+}
+
+
+/* Valores ficam alinhados à direita */
+
+.cesta-tabela th:nth-child(3),
+.cesta-tabela th:nth-child(4),
+.cesta-tabela td:nth-child(3),
+.cesta-tabela td:nth-child(4) {
+    text-align: right;
+}
+
+
+/* =========================================================
+   RESUMO DA COMPRA
+========================================================= */
+
+.cesta-resumo {
+    margin-top: 25px;
+
+    background-color: #102522;
+
+    border: 1px solid #B89B5E;
+
+    border-radius: 8px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Texto do total */
+
+.resumo-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.resumo-texto span {
+    color: #E6DFCE;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.resumo-texto strong {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    color: #D4B96A;
+}
+
+
+/* =========================================================
+   BOTÕES DA CESTA
+========================================================= */
+
+.botoes-cesta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   BOTÃO CONTINUAR COMPRANDO
+========================================================= */
+
+.btn-continuar {
+    background-color: transparent;
+
+    border: 1px solid #B89B5E;
+
+    color: #D4B96A;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+.btn-continuar:hover {
+    background-color: #16443D;
+
+    border-color: #D4B96A;
+
+    color: #F2E6C9;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(184, 155, 94, 0.25);
+}
+
+
+/* =========================================================
+   BOTÃO FINALIZAR
+========================================================= */
+
+.btn-finalizar {
+    background-color: #B89B5E;
+
+    border: 1px solid #B89B5E;
+
+    color: #101513;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+.btn-finalizar:hover {
+    background-color: #D6B96A;
+
+    border-color: #D6B96A;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(184, 155, 94, 0.35);
+}
+
+
+/* =========================
+   BOTÃO REMOVER
+========================= */
+
+.btn-remover {
+    border: 1px solid #8b6f47;
+
+    background: transparent;
+
+    color: #6b5438;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+
+.btn-remover:hover {
+    background: #6b5438;
+
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cesta-conteudo {
+        padding: 0 20px;
+    }
+
+
+    .cesta-tabela {
+        overflow-x: auto;
+    }
+
+
+    .cesta-tabela table {
+        min-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cesta-cabecalho {
+        padding: 45px 20px 35px;
+    }
+
+
+    .cesta-cabecalho h1 {
+        font-size: 32px;
+    }
+
+
+    .cesta-cabecalho p {
+        font-size: 14px;
+    }
+
+
+    .cesta-conteudo {
+        padding: 0 15px;
+
+        margin-top: 30px;
+    }
+
+
+    .cesta-resumo {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+
+        padding: 22px 20px;
+    }
+
+
+    .resumo-texto {
+        align-items: center;
+    }
+
+
+    /* Botões ficam um abaixo do outro no celular */
+
+    .botoes-cesta {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .btn-continuar,
+    .btn-finalizar {
+        width: 100%;
+    }
+
+}
+

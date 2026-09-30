@@ -1,0 +1,85 @@
+<!-- ========================= PÁGINA DE REENVIO DE SENHA ========================= -->
+
+<div class="reenvio-pagina">
+
+
+    <!-- CABEÇALHO -->
+
+    <div class="reenvio-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>Recuperar senha</h1>
+
+        <p>
+            Informe seu e-mail para receber as instruções.
+        </p>
+
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+
+    <form
+        #formulario
+        class="reenvio-form"
+    >
+
+        <!-- E-MAIL -->
+
+        <div class="campo">
+
+            <label
+                for="txtEmail"
+                class="form-label"
+            >
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="txtEmail"
+                name="email"
+                class="form-control"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+        </div>
+
+
+        <!-- BOTÃO -->
+
+        <div class="reenvio-acoes">
+
+            <button
+                type="button"
+                class="btn btn-reenvio"
+                (click)="reenviarSenha(formulario)"
+            >
+                Reenviar senha
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- MENSAGEM DE SUCESSO -->
+
+    <div
+        class="alert alert-success reenvio-alert"
+        [hidden]="!mensagemEnviada"
+    >
+
+        <strong>Solicitação enviada!</strong>
+
+        <p>
+            Se o e-mail estiver cadastrado, você receberá
+            as instruções para redefinir sua senha.
+        </p>
+
+    </div>
+
+
+</div>

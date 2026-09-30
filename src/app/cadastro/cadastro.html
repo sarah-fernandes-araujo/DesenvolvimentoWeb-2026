@@ -1,0 +1,221 @@
+<!-- PÁGINA DE CADASTRO -->
+<div class="cadastro-pagina">
+
+
+    <!-- CABEÇALHO -->
+
+    <div class="cadastro-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>Crie sua conta</h1>
+
+        <p>
+            Preencha seus dados para realizar seu cadastro.
+        </p>
+
+    </div>
+
+
+    <!-- MENSAGEM DE SUCESSO -->
+
+    <div
+        class="alert alert-success"
+        *ngIf="cadastroEnviado"
+    >
+        Cadastro concluído com sucesso!
+
+        <br>
+
+        Você será direcionado para a página de login.
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+
+    <form
+        #formCadastro
+        class="cadastro-form was-validated"
+    >
+
+
+        <!-- NOME -->
+
+        <div class="campo">
+
+            <label
+                for="txtNome"
+                class="form-label"
+            >
+                Nome completo
+            </label>
+
+            <input
+                type="text"
+                id="txtNome"
+                name="nome"
+                class="form-control"
+                maxlength="100"
+                required
+            >
+
+            <div class="invalid-feedback">
+                Nome é obrigatório!
+            </div>
+
+        </div>
+
+
+        <!-- DOCUMENTO -->
+
+        <div class="campo">
+
+            <label
+                for="txtDocumento"
+                class="form-label"
+            >
+                Documento
+            </label>
+
+            <input
+                type="text"
+                id="txtDocumento"
+                name="documento"
+                class="form-control"
+                required
+            >
+
+            <div class="invalid-feedback">
+                Documento é obrigatório!
+            </div>
+
+        </div>
+
+
+        <!-- E-MAIL -->
+
+        <div class="campo">
+
+            <label
+                for="txtEmail"
+                class="form-label"
+            >
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="txtEmail"
+                name="email"
+                class="form-control"
+                required
+            >
+
+            <div class="invalid-feedback">
+                E-mail é obrigatório!
+            </div>
+
+        </div>
+
+
+        <!-- SENHA -->
+
+        <div class="campo">
+
+            <label
+                for="txtSenha"
+                class="form-label"
+            >
+                Senha
+            </label>
+
+            <input
+                type="password"
+                id="txtSenha"
+                name="senha"
+                class="form-control"
+                required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            >
+
+            <div class="invalid-feedback">
+                A senha deve conter pelo menos 8 caracteres,
+                incluindo uma letra maiúscula, uma letra minúscula,
+                um número e um caractere especial (@$!%*?&).
+            </div>
+
+        </div>
+
+
+        <!-- TELEFONE -->
+
+        <div class="campo">
+
+            <label
+                for="txtTelefone"
+                class="form-label"
+            >
+                Telefone
+            </label>
+
+            <input
+                type="tel"
+                id="txtTelefone"
+                name="telefone"
+                class="form-control"
+                placeholder="(11)99999-9999"
+                pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"
+                required
+            >
+
+            <div class="invalid-feedback">
+                Informe um telefone válido!
+            </div>
+
+        </div>
+
+
+        <!-- ENDEREÇO -->
+
+        <div class="campo campo-endereco">
+
+            <label
+                for="txtEndereco"
+                class="form-label"
+            >
+                Endereço
+            </label>
+
+            <textarea
+                id="txtEndereco"
+                name="endereco"
+                class="form-control"
+                rows="2"
+                required
+            ></textarea>
+
+            <div class="invalid-feedback">
+                Informe um endereço completo!
+            </div>
+
+        </div>
+
+
+        <!-- BOTÃO -->
+
+        <div class="cadastro-acoes">
+
+            <button
+                type="button"
+                class="btn btn-success"
+                (click)="gravar(formCadastro)"
+            >
+                Gravar cadastro
+            </button>
+
+        </div>
+
+
+    </form>
+
+</div>

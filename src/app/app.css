@@ -1,0 +1,148 @@
+:host {
+    display: block;
+    min-height: 100vh;
+}
+
+main {
+    min-height: calc(100vh - 120px);
+}
+
+.cabecalho {
+    width: 100%;
+    min-height: 110px;
+    background-color: #001716;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #B89B5E;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logotipo {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu a {
+    color: #F2E6C9;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 11px 18px;
+    border: 1px solid #B89B5E;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   EFEITO GLOW AO PASSAR O MOUSE
+   Quando o mouse passa sobre o botão/link:
+   - ele sobe levemente
+   - ganha brilho ao redor
+========================================================= */
+
+.menu a:hover {
+    background-color: #B89B5E;
+    color: #101513;
+    transform: translateY(-2px);
+
+    /* GLOW / BRILHO */
+    box-shadow: 0 4px 12px rgba(184, 155, 94, 0.25);
+}
+
+
+/* =========================================================
+   EFEITO DE CLIQUE
+   Quando o usuário pressiona o botão:
+   - ele afunda levemente
+   - fica um pouquinho menor
+   dando a sensação de botão pressionado
+========================================================= */
+
+button:active,
+.menu a:active,
+.btn:active {
+    transform: translateY(1px) scale(0.97);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #001716;
+    color: #F2E6C9;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+    border-top: 1px solid #B89B5E;
+}
+
+.rodape p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.rodape p:first-child {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #D4B96A;
+    margin-bottom: 12px;
+}
+
+
+/*===================*RESPONSIVIDADE================*/
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .logotipo {
+        width: 150px;
+    }
+
+    .menu {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+}
+

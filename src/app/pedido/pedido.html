@@ -1,0 +1,225 @@
+<!-- ========================= PÁGINA DE PEDIDO ========================= -->
+
+<div class="pedido-pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="pedido-cabecalho">
+
+        <span>SDG MUSIC</span>
+
+        <h1>Finalizar pedido</h1>
+
+        <p>
+            Confira as informações do seu pedido.
+        </p>
+
+    </div>
+
+
+    <!-- IDENTIFICAÇÃO DO PEDIDO -->
+
+    <div class="pedido-resumo">
+
+        <div>
+            <span>Pedido</span>
+            <strong>#0002</strong>
+        </div>
+
+        <div>
+            <span>Data</span>
+            <strong>26/09/2026</strong>
+        </div>
+
+        <div>
+            <span>Status</span>
+            <strong class="status">Em andamento</strong>
+        </div>
+
+    </div>
+
+
+    <!-- PRODUTOS DO PEDIDO -->
+
+    <div class="pedido-produtos">
+
+        <h2>Produtos</h2>
+
+        <div
+            class="produto-item"
+            *ngFor="let item of cestaService.cesta.itens"
+        >
+
+            <div class="produto-imagem">
+
+                <img
+                    [src]="item.produto.codigo + '.png'"
+                    [alt]="item.produto.nome"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    {{ item.produto.nome }}
+                </h3>
+
+                <p>
+                    Quantidade: {{ item.quantidade }}
+                </p>
+
+            </div>
+
+
+            <div class="produto-preco">
+
+                R$ {{ item.valorItem | number:'1.2-2' }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOTAL -->
+
+    <div class="pedido-total">
+
+        <span>Total do pedido</span>
+
+        <strong>
+            R$ {{ cestaService.cesta.valorTotal | number:'1.2-2' }}
+        </strong>
+
+    </div>
+  
+    <!-- ========================= FORMA DE PAGAMENTO ========================= -->
+
+    <div class="pagamento">
+
+        <h2>Forma de pagamento</h2>
+
+        <p class="pagamento-descricao">
+            Escolha como deseja realizar o pagamento do seu pedido.
+        </p>
+
+
+        <div class="pagamento-opcoes">
+
+            <!-- PIX -->
+
+            <label class="opcao-pagamento">
+
+                <input
+                    type="radio"
+                    name="pagamento"
+                    (change)="formaPagamento = 'PIX'"
+                >
+
+                <span>
+                    <strong>PIX</strong>
+                    <small>Pagamento instantâneo</small>
+                </span>
+
+            </label>
+
+
+            <!-- CARTÃO DE CRÉDITO -->
+
+            <label class="opcao-pagamento">
+
+                <input
+                    type="radio"
+                    name="pagamento"
+                    (change)="formaPagamento = 'Cartão de crédito'"
+                >
+
+                <span>
+                    <strong>Cartão de crédito</strong>
+                    <small>Pagamento com cartão de crédito</small>
+                </span>
+
+            </label>
+
+
+            <!-- CARTÃO DE DÉBITO -->
+
+            <label class="opcao-pagamento">
+
+                <input
+                    type="radio"
+                    name="pagamento"
+                    (change)="formaPagamento = 'Cartão de débito'"
+                >
+
+                <span>
+                    <strong>Cartão de débito</strong>
+                    <small>Pagamento com cartão de débito</small>
+                </span>
+
+            </label>
+
+
+            <!-- BOLETO -->
+
+            <label class="opcao-pagamento">
+
+                <input
+                    type="radio"
+                    name="pagamento"
+                    (change)="formaPagamento = 'Boleto bancário'"
+                >
+
+                <span>
+                    <strong>Boleto bancário</strong>
+                    <small>Pagamento por boleto</small>
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- BOTÃO DE CONFIRMAÇÃO -->
+
+        <button
+            type="button"
+            class="btn-confirmar"
+            [disabled]="!formaPagamento"
+            (click)="confirmarPedido()"
+        >
+            Confirmar pedido
+        </button>
+
+
+        <!-- CONFIRMAÇÃO -->
+
+        <div
+            class="pedido-confirmado"
+            *ngIf="pedidoConfirmado"
+        >
+
+            <span>✓</span>
+
+            <h3>Pedido confirmado!</h3>
+
+    
+            <p>
+                Seu pedido <strong>#0002</strong>
+                foi confirmado com sucesso.
+            </p>
+
+            <p>
+                Forma de pagamento:
+                <strong>{{ formaPagamento }}</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+

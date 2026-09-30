@@ -1,0 +1,260 @@
+/* =========================================================
+   PÁGINA DE PEDIDOS
+========================================================= */
+
+.pedidos-pagina {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 30px 60px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.pedidos-cabecalho {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* Texto "SDG MUSIC" */
+
+.pedidos-cabecalho span {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #B89B5E;
+}
+
+
+/* Título */
+
+.pedidos-cabecalho h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #D4B96A;
+    margin: 8px 0 10px;
+}
+
+
+/* Texto abaixo do título */
+
+.pedidos-cabecalho p {
+    color: #F2E6C9;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   CARD DO PEDIDO
+========================================================= */
+
+.pedido-card {
+    margin-bottom: 20px;
+
+    padding: 25px 30px;
+
+    background-color: #F2E6C9;
+
+    border: 1px solid #B89B5E;
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.pedido-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(224, 193, 90, 0.25);
+}
+
+
+/* =========================================================
+   PARTE SUPERIOR DO PEDIDO
+========================================================= */
+
+.pedido-topo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(184, 155, 94, 0.45);
+}
+
+
+/* Texto "Pedido" */
+
+.pedido-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 13px;
+
+    color: #8F7438;
+}
+
+
+/* Número do pedido */
+
+.pedido-topo strong {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    color: #16443D;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.pedido-status {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background-color: #16443D;
+
+    color: #F2E6C9;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.pedido-info {
+    display: flex;
+
+    gap: 80px;
+
+    padding: 20px 0;
+}
+
+
+/* Títulos das informações */
+
+.pedido-info span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 13px;
+
+    color: #8F7438;
+}
+
+
+/* Valores */
+
+.pedido-info strong {
+    font-size: 16px;
+
+    color: #16443D;
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.pedido-acoes {
+    text-align: right;
+}
+
+
+.btn-detalhes {
+    padding: 10px 20px;
+
+    background-color: #B89B5E;
+
+    border: 1px solid #B89B5E;
+
+    color: #101513;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Hover */
+
+.btn-detalhes:hover {
+    background-color: #D4B96A;
+
+    border-color: #D4B96A;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(184, 155, 94, 0.30);
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .pedidos-pagina {
+        margin: 40px auto;
+
+        padding: 0 20px 50px;
+    }
+
+
+    .pedidos-cabecalho h1 {
+        font-size: 34px;
+    }
+
+
+    .pedido-card {
+        padding: 20px;
+    }
+
+
+    .pedido-topo {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .pedido-info {
+        gap: 40px;
+    }
+
+
+    .pedido-acoes {
+        text-align: left;
+    }
+
+}
